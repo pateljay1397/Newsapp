@@ -7,12 +7,3 @@ export const getBitcoinArticles = async () => {
     const json = await response.json();
     console.log(json);
 }
-
-async componentDidMount() {
-    try {
-      const response = await getBitcoinArticles();
-      this.setState({ articles: response.articles });
-    } catch (error) {
-      this.setState({ apiError: "Could not find any articles" });
-    }
-  };
